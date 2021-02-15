@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>多彩立方体</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .da{
+            width: 200px;
+            height: 200px; 
+            margin: 200px auto; 
+            perspective: 2000px;
+        }
+        .zhong,.hao{
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            margin: 50px auto;
+            font-size: 32px;
+            transform-style: preserve-3d;
+            animation: add 5s linear infinite;
+            transform: rotateX(-40deg) rotateY(32deg);
+        }
+        .hehe{
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            opacity: 0.7;
+        }
+        img{
+            width: 200px;
+            height: 200px;
+        }
+        .da:hover .hao{
+            width: 220px;
+            height: 220px;
+        }
+        @keyframes add{
+            0%{
+                transform: rotateY(0deg);
+            }
+            20%{
+                transform: rotateY(90deg)
+            }
+            40%{
+                transform: rotateY(190deg);
+            }
+            60%{
+                transform: rotateY(280deg);
+            }
+            100%{
+                transform: rotateY(360deg);
+            }
+        } 
+        .top{
+            transform: rotateX(90deg) translateZ(100px);
+            background-size: cover;
+        }
+        .da:hover .hao.top{
+            transform: rotateX(90deg) translateZ(300px);
+        }
+        .front{
+            transform: translateZ(100px);
+            background-size: cover;
+        }
+        .da:hover .hao.front{
+            transform: rotateZ(300px)
+        }
+        .back{
+            transform: rotateY(180deg) translateZ(100px);
+            background-size: cover;
+        }
+        .da:hover .hao.back{
+            transform: rotateY(180deg) translateZ(300px);
+        }
+        .left{
+            transform: rotateY(-90deg) translateZ(100px);
+            background-size: cover;
+        }
+        .da:hover .hao.left{
+            transform: rotateY(-90deg) translateZ(300px);
+        }
+        .right{
+            transform: rotateY(90deg) translateZ(100px);
+            background-size: cover;
+        }
+        .da:hover .hao.right{
+            transform: rotateY(90deg) translateZ(300px);
+        }
+        .bottom{
+            transform: rotateX(-90deg) translateZ(100px);
+            background-size: cover;
+        }
+        .da:hover .hao.bottom{
+            transform: rotateX(-90deg) translateZ(300px);
+        }
+    </style>
+</head>
+<body>
+    <div class="da">
+        <div class="zhong">
+            <div class="hehe front"><img src="pic/15113187532548215.jpg" alt=""></div>
+            <div class="hehe back"><img src="pic/1560571258815-O0XXY0550o_1280-720.jpg" alt=""></div>
+            <div class="hehe left"><img src="pic/20200122220428_vTaK4.jpeg.jpg" alt=""></div>
+            <div class="hehe right"><img src="pic/d6f779d1255e43448b619d75da08f5c4.jpg" alt=""></div>
+            <div class="hehe top"><img src="pic/20171101182513_jmSML.jpeg.jpg" alt=""></div>
+            <div class="hehe bottom"><img src="pic/d6f779d1255e43448b619d75da08f5c4.jpg" alt=""></div>
+        </div>
+        <div class="hao">
+            <div class="hehe front"><img src="pic/15113187532548215.jpg" alt=""></div>
+            <div class="hehe back"><img src="pic/1560571258815-O0XXY0550o_1280-720.jpg" alt=""></div>
+            <div class="hehe left"><img src="pic/20200122220428_vTaK4.jpeg.jpg" alt=""></div>
+            <div class="hehe right"><img src="pic/d6f779d1255e43448b619d75da08f5c4.jpg" alt=""></div>
+            <div class="hehe top"><img src="pic/20171101182513_jmSML.jpeg.jpg" alt=""></div>
+            <div class="hehe bottom"><img src="pic/d6f779d1255e43448b619d75da08f5c4.jpg" alt=""></div>
+        </div>
+    </div>
+</body>
+</html>
